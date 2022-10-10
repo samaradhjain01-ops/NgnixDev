@@ -8,6 +8,11 @@ server.use(express.json())
 const dbPath = "mongodb+srv://samaradhjain01:prefme5@cluster0.jmhnob1.mongodb.net/?retryWrites=true&w=majority"
 //const dbPath = "mongodb://localhost:27017"
 // 123456
+
+server.get('/testemp', (request,response) => {
+    response.status(200).send(['Employee', 'I love to employee your name', 'My Employee', 'Days of Employee'])
+})
+
 server.post("/get",(request,response)=>{
     console.log(request.body)
     MongoClient.connect(dbPath)
